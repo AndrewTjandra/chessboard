@@ -3,25 +3,16 @@ function chessboard(n){
 
   for(var i = 1; i <= n; i++){
     for(var j = 0; j < n; j++){
-      if(i % 2 === 0){
-        if(j % 2 === 0){
-          myChessboard += '#';
-        } else {
-          myChessboard += ' ';
-        }
+      if((i + j) % 2 === 0){
+        myChessboard += '#';
       } else {
-        if(j % 2 !== 0){
-          myChessboard += '#';
-        } else {
-          myChessboard += ' ';
-        }
+        myChessboard += ' ';
       }
     }
     if(i < n){
       myChessboard += '\n';
     }
   }
-
   return myChessboard;
 }
 
